@@ -60,6 +60,12 @@ public class Theatre {
         balletShow.addActor(actor1);
         balletShow.addActor(actor3);
 
+        // Выводим списки режиссёров
+        System.out.println("\n=== Список режиссёров для каждого спектакля ===");
+        System.out.println("\nспектакль " + regularShow.getDirector());
+        System.out.println("опера " + operaShow.getDirector());
+        System.out.println("балет " + balletShow.getDirector());
+
         // Выводим списки актёров для каждого спектакля
         System.out.println("\n=== АФИША ===");
         System.out.println("\n1. Спектакль '" + regularShow.getTitle() + "':");

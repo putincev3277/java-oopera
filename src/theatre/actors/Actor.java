@@ -11,20 +11,14 @@ public class Actor extends Person {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-
+        if (!super.equals(obj)) return false; // сначала проверяем базовые поля Person
         Actor actor = (Actor) obj;
-
-        return Double.compare(actor.height, height) == 0
-                && getName().equals(actor.getName())
-                && getSurname().equals(actor.getSurname());
+        return Double.compare(actor.height, height) == 0;
     }
 
     @Override
     public int hashCode() {
-        int result = getName().hashCode();
-        result = 31 * result + getSurname().hashCode();
+        int result = super.hashCode(); // берём базовый хэш от Person
         result = 31 * result + Double.hashCode(height);
         return result;
     }

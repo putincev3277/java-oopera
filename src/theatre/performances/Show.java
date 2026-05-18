@@ -19,6 +19,10 @@ public class Show {
         return title;
     }
 
+    // Метод для получения информации о режиссере
+    public Director getDirector() {
+        return director;
+    }
     // Методы для работы с актёрским составом
     public void addActor(Actor actor) {
         if (cast.contains(actor)) {
